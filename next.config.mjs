@@ -14,6 +14,7 @@ const nextConfig = {
   },
   pageExtensions: ["md", "mdx", "tsx"],
   output: "export",
+  basePath: "/pigmentcss-with-nextjs",
 };
 
 const withMDX = createMDX({
