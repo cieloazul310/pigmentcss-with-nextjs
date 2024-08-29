@@ -1,11 +1,17 @@
 import { withPigment } from "@pigment-css/nextjs-plugin";
-import { createTheme } from "@mui/material";
+import { createTheme, colors } from "@mui/material";
 import createMDX from "@next/mdx";
 import remarkFrontmatter from "remark-frontmatter";
 import remarkMdxFrontmatter from "remark-mdx-frontmatter";
 import remarkGfm from "remark-gfm";
 
+/**
+ * @type {import("next").NextConfig}
+ */
 const nextConfig = {
+  experimental: {
+    mdxRs: true,
+  },
   pageExtensions: ["md", "mdx", "tsx"],
 };
 
@@ -24,23 +30,33 @@ const pigmentConfig = {
     cssVariables: true,
     typography: {
       fontFamily: "var(--font-roboto)",
+      h1: {
+        fontSize: "4rem"
+      },
+      h2: {
+        fontSize: "2.4rem",
+      },
+      h3: {
+        fontSize: "2rem",
+      },
+      h4: {
+        fontSize: "1.6rem",
+      },
+      h5: {
+        fontSize: "1.4rem"
+      },
+      h6: {
+        fontSize: "1.2rem",
+      },
     },
     colorSchemes: {
-      light: {
-        colors: {
-          background: "#f9f9f9",
-          foreground: "#121212",
-        },
-      },
-      dark: {
-        colors: {
-          background: "#212121",
-          foreground: "#fff",
-        },
-      },
+      light: true,
+      dark: true,
     },
-    getSelector: (colorScheme) =>
-      colorScheme ? `.theme-${colorScheme}` : ":root",
+    palette: {
+      primary: colors.teal,
+      secondary: colors.orange,
+    },
   }),
 };
 

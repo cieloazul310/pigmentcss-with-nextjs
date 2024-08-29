@@ -1,8 +1,7 @@
 import type { PropsWithChildren } from "react";
 import Container from "@mui/material-pigment-css/Container";
 
-function Layout({ children, ...props }: PropsWithChildren) {
-  console.log(props);
+function Layout({ children }: PropsWithChildren) {
   return <Container maxWidth="md">{children}</Container>;
 }
 

@@ -1,17 +1,30 @@
 ---
-title: Pigment CSS with Next.js App Router
+title: Material-UI v6 and Pigment CSS in Next.js App Router
 ---
 
-このページはMaterial-UI v6で試験公開されているゼロランタイムCSS・Pigment CSSを使って、Next.js App Routerに対応するリポジトリです。
+```txt
+react: ^18
+react-dom: ^18
+next: ^14
+@mui/material: ^6
+@mui/material-pigment-css: ^6
+@pigment-css/nextjs-plugin: ^0.0.21
+```
 
-## 概要
+## Problems
 
-Material-UIはGoogleが開発するマテリアルデザインをReactで実装するコンポーネントライブラリ。2024年8月にv6がリリースされた。
+(solved) **Custom Theme Not Working with v6 and Pigment CSS in Next.js** #43501  
+https://github.com/mui/material-ui/issues/43501
 
-なお最新版のマテリアルデザインは3(M3)であるが、Material-UI v6では依然としてマテリアルデザイン2が使われている。M3は2024年内のリリースを予定しているMaterial-UI v7で導入される予定。
+## References
 
-### ゼロランタイムCSS
+**Material UI x Pigment CSS - Next.js App Router example in TypeScript**  
+https://github.com/mui/material-ui/tree/master/examples/material-ui-pigment-css-nextjs-ts
 
-2024年現在、今後のReactはReact Server Components(RSC)が主流になっていくと考えられる。
+**Migrating to Pigment CSS**  
+https://mui.com/material-ui/migration/migrating-to-pigment-css/
 
-さて、Material-UI v6では従来通りEmotionに依拠したスタイルシステムが使われている。
+**Pigment CSS**  
+https://github.com/mui/pigment-css
+
+[Page-2](/page-2)

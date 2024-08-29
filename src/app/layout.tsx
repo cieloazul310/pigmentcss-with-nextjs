@@ -2,10 +2,10 @@ import type { PropsWithChildren } from "react";
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import CssBaseline from "@mui/material/CssBaseline";
-import AppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import ColorModeSwitcher from "@/components/color-mode-switcher";
+import { LayoutStoreProvider } from "@/providers/layout-store-provider";
+import AppBar from "@/components/layout/appbar";
+import Drawer from "@/components/layout/drawer";
+import Fab from "@/components/layout/fab";
 import "@mui/material-pigment-css/styles.css";
 
 const roboto = Roboto({
@@ -25,16 +25,14 @@ export default function RootLayout({ children }: PropsWithChildren) {
     <html lang="ja">
       <body className={roboto.variable}>
         <CssBaseline />
-        <AppBar variant="elevation" position="sticky">
-          <Toolbar>
-            <Typography component="h1">
-              Pigment CSS + Next.js App Router
-            </Typography>
-            <div sx={{ flexGrow: 1 }} />
-            <ColorModeSwitcher />
-          </Toolbar>
-        </AppBar>
-        {children}
+        <LayoutStoreProvider>
+          <AppBar />
+          {children}
+          <Drawer />
+          <div sx={{ position: "fixed", bottom: 16, right: 16, zIndex: "fab" }}>
+            <Fab />
+          </div>
+        </LayoutStoreProvider>
       </body>
     </html>
   );

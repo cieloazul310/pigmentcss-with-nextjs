@@ -1,36 +1,26 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Material-UI v6 and Pigment CSS in Next.js App Router
 
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```txt
+react: ^18
+react-dom: ^18
+next: ^14
+@mui/material: ^6
+@mui/material-pigment-css: ^6
+@pigment-css/nextjs-plugin: ^0.0.20
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Problems
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+(Solved) **Custom Theme Not Working with v6 and Pigment CSS in Next.js** #43501  
+<https://github.com/mui/material-ui/issues/43501>
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## References
 
-## Learn More
+**Material UI x Pigment CSS - Next.js App Router example in TypeScript**  
+<https://github.com/mui/material-ui/tree/master/examples/material-ui-pigment-css-nextjs-ts>
 
-To learn more about Next.js, take a look at the following resources:
+**Migrating to Pigment CSS**  
+<https://mui.com/material-ui/migration/migrating-to-pigment-css/>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+**Pigment CSS**  
+<https://github.com/mui/pigment-css>
