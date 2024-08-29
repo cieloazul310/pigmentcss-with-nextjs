@@ -13,6 +13,7 @@ const nextConfig = {
     mdxRs: true,
   },
   pageExtensions: ["md", "mdx", "tsx"],
+  output: "export",
 };
 
 const withMDX = createMDX({
